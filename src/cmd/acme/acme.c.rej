@@ -1,0 +1,31 @@
+--- acme/acme.c	2019-01-09 18:31:36.612927516 -0500
++++ acme2k/acme.c	2019-01-06 21:33:09.874020753 -0500
+@@ -23,28 +25,21 @@
+ void	xfidallocthread(void*);
+ void	newwindowthread(void*);
+ void	plumbproc(void*);
+ int	timefmt(Fmt*);
+ 
+ Reffont	**fontcache;
+ int		nfontcache;
+ char		wdir[512] = ".";
+ Reffont	*reffonts[2];
+ int		snarffd = -1;
+ int		mainpid;
+-int		swapscrollbuttons = FALSE;
+ char		*mtpt;
+ 
+ enum{
+ 	NSnarf = 1000	/* less than 1024, I/O buffer size */
+ };
+ Rune	snarfrune[NSnarf+1];
+ 
+-char		*fontnames[2] =
+-{
+-	"/lib/font/bit/lucsans/euro.8.font",
+-	"/lib/font/bit/lucm/unicode.9.font"
+-};
+-
+ Command *command;
+ 
+ void	shutdownthread(void*);
