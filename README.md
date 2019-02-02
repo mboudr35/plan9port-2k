@@ -1,5 +1,7 @@
 This is a port of many Plan 9 libraries and programs to Unix.
 
+It has been modified to include the [acme-2k](https://github.com/karahobny/acme2k) patches for dank colorscheme configurations and other fun stuff.
+
 Installation
 ------------
 
